@@ -8,8 +8,8 @@ namespace practicaProgramacionBasica
 {
     internal abstract class Pinguino
     {
-        public abstract string Nombre(string nombre);
-        public abstract string Especie(string especie);
+        public abstract string Name();
+        public abstract string Specie();
 
         public void Volar() {
             Console.WriteLine("No puedo volar (en pinguino)");
@@ -24,14 +24,21 @@ namespace practicaProgramacionBasica
 
     sealed internal class Emperador : Pinguino
     {
-        public override string Nombre(string nombre)
-        {
-            return nombre;
+        string Nombre, Especie;
+
+        public Emperador(string nombre, string especie) {
+            Nombre = nombre;
+            Especie= especie;
         }
 
-        public override string Especie(string especie)
+        public override string Name()
         {
-            return especie;
+            return Nombre;
+        }
+
+        public override string Specie()
+        {
+            return Especie;
         }
     }
 }

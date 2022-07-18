@@ -18,9 +18,9 @@ namespace practicaProgramacionBasica
                 Console.WriteLine("No se pudo leer el archivo");
             }
 
-            Emperador PruebaClases = new Emperador();
-            Console.WriteLine(PruebaClases.Nombre("Patrick"));
-            Console.WriteLine(PruebaClases.Especie("Emperador"));
+            Emperador PruebaClases = new Emperador("Patrick", "Emperador");
+            Console.WriteLine(PruebaClases.Name());
+            Console.WriteLine(PruebaClases.Specie());
             PruebaClases.Volar();
             PruebaClases.Hablar();
             Console.ReadKey();
