@@ -8,7 +8,7 @@ namespace practicaProgramacionBasica
         public bool comprobacion(string inputFile)
         {
             try {
-                using (StreamReader CountriesInput = new StreamReader(inputFile));
+                using (StreamReader CountriesInput = new StreamReader(inputFile))
                 return true;
 			}
 			catch (FileNotFoundException e){

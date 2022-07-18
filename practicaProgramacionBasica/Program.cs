@@ -16,8 +16,14 @@ namespace practicaProgramacionBasica
                 GreetCountries(inputFile, outputFile);
             else {
                 Console.WriteLine("No se pudo leer el archivo");
-                Console.ReadKey();
             }
+
+            Emperador PruebaClases = new Emperador();
+            Console.WriteLine(PruebaClases.Nombre("Patrick"));
+            Console.WriteLine(PruebaClases.Especie("Emperador"));
+            PruebaClases.Volar();
+            PruebaClases.Hablar();
+            Console.ReadKey();
         }
 
         static void GreetCountries(string inputFile, string outputFile) {
@@ -30,7 +36,6 @@ namespace practicaProgramacionBasica
                     writer.WriteLine("Saludos hasta " + pais);
                 }
                 Console.WriteLine("Archivo escrito correctamente");
-                Console.ReadKey();
             }
         }
     }
